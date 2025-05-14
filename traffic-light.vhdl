@@ -1,14 +1,16 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
--- use IEEE.STD_LOGIC_ARITH.ALL;
--- use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity traffic_light is
     port (
-        clk : in std_logic; -- Clock input
-        rst : in std_logic; -- Reset input
-        ns_red, ns_yellow, ns_green : out std_logic; -- North-South lights
-        ew_red, ew_yellow, ew_green : out std_logic  -- East-West lights
+        -- Clock input
+        clk : in std_logic; 
+        -- Reset input
+        rst : in std_logic; 
+        -- North-South lights
+        ns_red, ns_yellow, ns_green : out std_logic; 
+        -- East-West lights
+        ew_red, ew_yellow, ew_green : out std_logic  
     );
 end traffic_light;
 
@@ -16,8 +18,9 @@ architecture Behavioral of traffic_light is
     type state_type is (S_NS_GREEN, S_NS_YELLOW, S_EW_GREEN, S_EW_YELLOW);
     signal state, next_state : state_type;
     signal counter : integer := 0;
-    constant GREEN_TIME : integer := 30; -- 30 seconds
-    constant YELLOW_TIME : integer := 5; -- 5 seconds
+    -- 30 seconds for green, 5 seconds for yellow
+    constant GREEN_TIME : integer := 30; 
+    constant YELLOW_TIME : integer := 5; 
 
 begin
     process(clk, rst)
