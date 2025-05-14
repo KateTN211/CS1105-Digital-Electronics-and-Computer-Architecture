@@ -1,0 +1,7 @@
+v 4
+file . "traffic_light_tb.vhdl" "ce012b090f24a13762bbad85db9f99a0a2d17386" "20250513045019.150":
+  entity traffic_light_tb at 1( 0) + 0 on 15;
+  architecture behavioral of traffic_light_tb at 7( 94) + 0 on 16;
+file . "traffic-light.vhdl" "b9df505abaf461b3fe1b37bde8a148e233879a42" "20250513045019.091":
+  entity traffic_light at 1( 0) + 0 on 13;
+  architecture behavioral of traffic_light at 15( 409) + 0 on 14;
